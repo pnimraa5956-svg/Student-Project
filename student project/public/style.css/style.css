@@ -1,0 +1,233 @@
+/* ===== STUDENT MANAGEMENT DASHBOARD ===== */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap');
+
+:root {
+    --primary: #4f46e5;
+    --primary-dark: #3730a3;
+    --background: #f4f6fb;
+    --surface: #ffffff;
+    --text: #172033;
+    --muted: #64748b;
+    --border: #e2e8f0;
+    --danger: #dc2626;
+    --shadow: 0 8px 30px rgba(31, 41, 55, 0.07);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 35px;
+    min-height: 100vh;
+    background: var(--background);
+    color: var(--text);
+    font-family: 'DM Sans', sans-serif;
+    line-height: 1.6;
+}
+
+/* Main heading */
+
+h1 {
+    max-width: 1000px;
+    margin: 0 auto 24px;
+    padding: 28px 30px;
+    color: white;
+    background: linear-gradient(135deg, #312e81, #4f46e5, #7c3aed);
+    border-radius: 16px;
+    box-shadow: var(--shadow);
+    font-family: 'Manrope', sans-serif;
+    font-size: 28px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+}
+
+/* Horizontal lines */
+
+hr {
+    max-width: 1000px;
+    margin: 24px auto;
+    border: none;
+    border-top: 1px solid var(--border);
+}
+
+/* Navigation links */
+
+body > a {
+    display: inline-block;
+    margin: 5px 3px;
+    padding: 10px 14px;
+    color: #4338ca;
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.2s ease;
+}
+
+body > a:hover {
+    color: white;
+    background: var(--primary);
+    border-color: var(--primary);
+    transform: translateY(-1px);
+}
+
+/* Buttons */
+
+button {
+    margin: 5px 3px;
+    padding: 11px 19px;
+    color: white;
+    background: var(--primary);
+    border: none;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 3px 8px rgba(79, 70, 229, 0.15);
+    transition: 0.2s ease;
+}
+
+button:hover {
+    background: var(--primary-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(79, 70, 229, 0.2);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+/* Form input fields */
+
+input {
+    width: 260px;
+    max-width: 100%;
+    margin: 5px 8px;
+    padding: 12px 14px;
+    color: var(--text);
+    background: white;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    outline: none;
+    font-family: inherit;
+    font-size: 14px;
+    transition: 0.2s ease;
+}
+
+input:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.12);
+}
+
+/* Tables */
+
+table {
+    width: 100%;
+    max-width: 1000px;
+    margin: 20px auto;
+    overflow: hidden;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-collapse: separate;
+    border-spacing: 0;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+}
+
+th {
+    padding: 16px;
+    color: white;
+    background: #312e81;
+    font-size: 13px;
+    font-weight: 700;
+    text-align: left;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+td {
+    padding: 15px 16px;
+    border-bottom: 1px solid var(--border);
+    font-size: 14px;
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+tbody tr:nth-child(even),
+table tr:nth-child(even) {
+    background: #f8faff;
+}
+
+table tr:hover td {
+    background: #eef2ff;
+}
+
+/* Page width and general layout */
+
+body > button,
+body > input {
+    vertical-align: middle;
+}
+
+body > br + button {
+    margin-top: 10px;
+}
+
+/* Home page dashboard buttons */
+
+body > button {
+    min-width: 190px;
+}
+
+/* Better spacing for headings */
+
+h2, h3 {
+    color: #312e81;
+    font-family: 'Manrope', sans-serif;
+}
+
+/* Mobile responsive design */
+
+@media (max-width: 768px) {
+    body {
+        padding: 16px;
+    }
+
+    h1 {
+        padding: 22px 18px;
+        font-size: 22px;
+        border-radius: 12px;
+    }
+
+    body > a {
+        padding: 8px 10px;
+        font-size: 12px;
+    }
+
+    input {
+        width: 100%;
+        margin: 8px 0 14px;
+    }
+
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    th, td {
+        padding: 12px;
+    }
+
+    button {
+        max-width: 100%;
+    }
+}
